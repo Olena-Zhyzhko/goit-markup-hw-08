@@ -1,0 +1,20 @@
+.footer__address {
+    margin-top: 20px;
+    color: var(--light-color);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.footer-contacts {
+    &__list {
+        margin-top: 9px;
+    }
+    
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    
+    &__link {
+        color: var(--style-text-color);
+    }
+}

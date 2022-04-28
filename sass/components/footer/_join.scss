@@ -1,0 +1,37 @@
+
+
+.footer-social__unit {
+    margin-left: 70px;
+
+    & .social__list {
+        margin: 0;
+    }
+
+    & .social__icon {
+        fill: var(--light-color);
+    }
+}
+
+.footer-social__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color var(--anim);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+
+

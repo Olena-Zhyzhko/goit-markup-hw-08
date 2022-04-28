@@ -1,0 +1,22 @@
+.logo {
+  color: #000000;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  @media screen and (max-widht: 1200px) {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+
+  &--accent {
+    color: var(--accent-color);
+  }
+  
+  &--light {
+    color: var(--light-color);
+  }
+}
+

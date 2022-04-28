@@ -1,0 +1,40 @@
+.clients-list {
+    display: flex;
+    margin-left: -30px;
+}
+
+.clients-item {
+    margin-left: 30px;
+    flex-basis: calc(100% / 6 - 30px);
+    color: #afb1b8;
+}
+
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: border var(--anim);
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+    }
+}
+
+.clients-icon {
+    fill: #afb1b8;
+    transition: fill var(--anim);
+
+    .clients-link:hover &,
+    .clients-link:focus & {
+        fill: var(--accent-color);
+    }
+}
+
+
+
