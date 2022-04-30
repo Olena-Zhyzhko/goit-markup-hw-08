@@ -1,15 +1,35 @@
 .checkbox-label {
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     // align-items: center;
-    // justify-content: center;
+    justify-content: center;
     color: var(--primery-text-color);
     margin-top: 20px;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 360px) {
         display: block;
         font-size: 12px;
         line-height: 1.17;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 360px) {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 1.17;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        display: flex;
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 1.71;
     }
 
 }

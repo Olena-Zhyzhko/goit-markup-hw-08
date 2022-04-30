@@ -24,12 +24,20 @@
         display: none;
     }
 
+    &:hover .icon-menu {
+        fill: var(--accent-color);
+    }
+
     & .icon-cross {
         display: none;
     }
     
     &.is-active .icon-cross {
         display: block;
+
+        &:active .icon-cros,
+        &:hover .icon-cros {
+            fill: var(--accent-color);
     }
     
     &.is-active .icon-menu {

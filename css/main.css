@@ -1027,9 +1027,11 @@ img {
 
 .modal {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: calc(100vw - 30px);
   height: auto;
-  padding: 40px;
   background-color: var(--light-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1053,6 +1055,13 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
   }
 }
 
@@ -1155,15 +1164,43 @@ img {
 
 .checkbox-label {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   color: var(--primery-text-color);
   margin-top: 20px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 360px) {
   .checkbox-label {
     display: block;
     font-size: 12px;
     line-height: 1.17;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .checkbox-label {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.17;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .checkbox-label {
+    display: flex;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 
