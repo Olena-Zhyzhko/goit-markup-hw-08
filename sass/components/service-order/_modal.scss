@@ -1,10 +1,10 @@
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
             
-    width: calc(100vw - 30px);
+    width: 100%;
     height: auto;
     
     // padding: 40px;
@@ -14,16 +14,24 @@
     border-radius: 4px;
 
     @media screen and (max-width: 767px) {
+        position: relative;
         padding: 35px;
     }
 
     @media screen and (min-width: 480px) {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
         max-width: 450px;
         max-height: 609px;
+        margin-right: auto;
+        margin-left: auto;
         
     }
 
     @media screen and (min-width: 768px) {
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -34,11 +42,10 @@
 
     @media screen and (min-width: 1200px) {
         width: 528px;
-        // min-height: 400px;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
 
@@ -62,6 +69,11 @@
         &:focus .close {
             fill: var(--accent-color);
             cursor: pointer;
+
+        // @media screen and (max-width: 767px) {
+        //     top: 101px;
+        //     right: 23px;
+        // }
         }
     }
         

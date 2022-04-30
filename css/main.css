@@ -73,7 +73,6 @@ img {
 }
 
 .container {
-  outline: 1px solid red;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -243,6 +242,11 @@ img {
 
 .menu-btn.is-active .icon-menu {
   display: none;
+}
+
+.menu-btn:hover .icon-menu,
+.menu-btn:hover .icon-cross {
+  fill: var(--accent-color);
 }
 
 .menu-conteiner {
@@ -542,17 +546,22 @@ img {
 }
 
 .hero-title {
-  font-display: inline-block;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
-  max-width: 360px;
+  width: 360px;
   color: var(--light-color);
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 400px) {
+  .hero-title {
+    width: 300px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1021,9 +1030,9 @@ img {
   overflow-y: scroll;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .backdrop {
-    padding: 0;
+    padding: 93px 15px;
   }
 }
 
@@ -1034,11 +1043,7 @@ img {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100vw - 30px);
+  width: 100%;
   height: auto;
   background-color: var(--light-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1047,6 +1052,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .modal {
+    position: relative;
     padding: 35px;
   }
 }
@@ -1055,11 +1061,14 @@ img {
   .modal {
     max-width: 450px;
     max-height: 609px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
   .modal {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1070,6 +1079,10 @@ img {
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 

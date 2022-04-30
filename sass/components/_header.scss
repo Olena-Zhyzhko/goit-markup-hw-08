@@ -43,23 +43,11 @@
     &.is-active .icon-menu {
         display: none;
     }
+}
 
-    //     // &:active .icon-menu,
-    //     &:hover .icon-menu {
-    //         fill: var(--accent-color);
-    //     }
-    // }
-    // // &.is-active:active .icon-cros,
-    // &.is-active:hover .icon-cros {
-    //     fill: var(--accent-color);
-    // }
-
-    // &:active .icon-menu, 
-    // &:active .icon-cros,
-    // &:hover .icon-menu,
-    // &:hover .icon-cros {
-    //     fill: var(--accent-color);
-    // }
+.menu-btn:hover .icon-menu,
+.menu-btn:hover .icon-cross {
+    fill: var(--accent-color);
 }
 
 .menu-conteiner {

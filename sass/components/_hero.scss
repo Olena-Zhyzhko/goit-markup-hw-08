@@ -72,11 +72,11 @@
 // }
 
 .hero-title {
-    font-display: inline-block;
+    // font-display: inline-block;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30px;
-    max-width: 360px;
+    width: 360px;
 
     color: var(--light-color);
     font-weight: 900;
@@ -86,7 +86,7 @@
     text-transform: uppercase;
 
     @media screen and (max-width: 400px) {
-        
+        width: 300px;
     }
 
     @media screen and (min-width: 1200px) {
