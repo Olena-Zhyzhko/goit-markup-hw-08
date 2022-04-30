@@ -24,13 +24,65 @@
         <div class="container header__container">
             <!-- Логотип -->
             <a class="logo" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+                    <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <!--Мобильное меню -->
+            <div class="mobile-menu" id="mobile-menu" data-menu>
+                <nav class="mobile-nav">
+                    <ul class="mobile-nav__list list">
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link link mobile-nav__link--current" href="./index.html">Студия</a>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link link" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mobile-contacts">
+                    <ul class="mobile-contacts__list list">
+                        <li class="mobile-contacts__item">
+                            <a class="mobile-contacts__phone link" href="tel:+380961111111">
+                                +38 096 111 11 11
+                        </li>
+                        <li class="mobile-contacts__item">
+                            <a class="mobile-contacts__mail link" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-social list">
+                        <li class="mobile-social__item">
+                            <a class="mobile-social__link link" href=""> Instagram</a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a class="mobile-social__link link" href="">Twitter</a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a class="mobile-social__link link" href="">Facebook</a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a class="mobile-social__link link" href="">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>
+    
+            <!-- Обычное меню -->
             <nav class="nav">
                 <ul class="nav__list list">
                     <li class="nav__item">
-                        <a class="nav__link link " href="./index.html">Студия</a>
+                        <a class="nav__link link nav__link--current" href="./index.html">Студия</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link link nav__link--current" href="./portfolio.html">Портфолио</a>
+                        <a class="nav__link link" href="./portfolio.html">Портфолио</a>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link link" href="">Контакты</a>
@@ -43,14 +95,16 @@
                         <svg class="header-contacts__icon" width="16" height="12">
                             <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>
-                        info@devstudio.com</a>
+                        info@devstudio.com
+                    </a>
                 </li>
                 <li class="header-contacts__item">
                     <a class="header-contacts__link link" href="tel:+380961111111">
                         <svg class="header-contacts__icon" width="10" height="16">
                             <use href="./images/icons.svg#icon-smartphone"></use>
                         </svg>
-                        +38 096 111 11 11</a>
+                        +38 096 111 11 11
+                    </a>
                 </li>
             </ul>
         </div>
@@ -71,8 +125,21 @@
                     <li class="projects-item">
                         <a class="projects-link link" href="">
                             <div class="project-thumb">
-                                <img class="projects-pic" src="./images/portfolio/project-1.jpg" alt="ноутбук с загруженой страницей сайта компании"
-                                    width="370">
+                                <picture>
+                                    <source srcset="
+                                    ./images/portfolio/project-1-mob.jpg 1x,
+                                    ./images/portfolio/project-1-mob@2x.jpg 2x" media="(max-width: 767px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-1-desk.jpg 1x,
+                                    ./images/portfolio/project-1-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-1-tab.jpg 1x,
+                                    ./images/portfolio/project-1-tab@2x.jpg 2x" media="(min-width: 768px)">
+                                
+                                    <img class="projects-pic" src="./images/portfolio/project-1-desk.jpg"
+                                        alt="ноутбук с загруженой страницей сайта компании">
+                                </picture>
+                                
                                 <p class="project-discription">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить
@@ -92,8 +159,19 @@
                     <li class="projects-item">
                         <a class="projects-link" href="">
                             <div class="project-thumb">
-                                <img class="projects-pic" src="./images/portfolio/project-2.jpg" alt="борьба баскетболистов за мяч" width="370">
-                                <p class="project-discription">
+                                <picture>
+                                    <source srcset="
+                                    ./images/portfolio/project-2-mob.jpg 1x,
+                                    ./images/portfolio/project-2-mob@2x.jpg 2x" media="(max-width: 767px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-2-desk.jpg 1x,
+                                    ./images/portfolio/project-2-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-2-tab.jpg 1x,
+                                    ./images/portfolio/project-2-tab@2x.jpg 2x" media="(min-width: 768px)">
+                                    <img class="projects-pic" src="./images/portfolio/project-2-desk.jpg" alt="борьба баскетболистов за мяч">
+                                </picture>
+                                    <p class="project-discription">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить
                                     исчерпывающие сведения о компании или частном лице.
@@ -113,7 +191,19 @@
                     <li class="projects-item">
                         <a class="projects-link" href="">
                             <div class="project-thumb">
-                                <img class="projects-pic" src="./images/portfolio/project-3.jpg" alt="логотип ресторана" width="370">
+                                <picture>
+                                    <source srcset="
+                                    ./images/portfolio/project-3-mob.jpg 1x,
+                                    ./images/portfolio/project-3-mob@2x.jpg 2x" media="(max-width: 767px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-3-desk.jpg 1x,
+                                    ./images/portfolio/project-3-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-3-tab.jpg 1x,
+                                    ./images/portfolio/project-3-tab@2x.jpg 2x" media="(min-width: 768px)">
+
+                                <img class="projects-pic" src="./images/portfolio/project-3-desk.jpg" alt="логотип ресторана">
+                                </picture>
                                 <p class="project-discription">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить
@@ -133,7 +223,19 @@
                     <li class="projects-item">
                         <a class="projects-link" href="">
                             <div class="project-thumb">
-                                <img class="projects-pic" src="./images/portfolio/project-4.jpg" alt="черные наушники" width="370">
+                                <picture>
+                                    <source srcset="
+                                    ./images/portfolio/project-4-mob.jpg 1x,
+                                    ./images/portfolio/project-4-mob@2x.jpg 2x" media="(max-width: 767px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-4-desk.jpg 1x,
+                                    ./images/portfolio/project-4-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-4-tab.jpg 1x,
+                                    ./images/portfolio/project-4-tab@2x.jpg 2x" media="(min-width: 768px)">
+
+                                <img class="projects-pic" src="./images/portfolio/project-4-desk.jpg" alt="черные наушники">
+                                </picture>
                                 <p class="project-discription">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить
@@ -153,7 +255,19 @@
                     <li class="projects-item">
                         <a class="projects-link" href="">
                             <div class="project-thumb">
-                                <img class="projects-pic" src="./images/portfolio/project-5.jpg" alt="две коробочки" width="370">
+                                <picture>
+                                    <source srcset="
+                                    ./images/portfolio/project-5-mob.jpg 1x,
+                                    ./images/portfolio/project-5-mob@2x.jpg 2x" media="(max-width: 767px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-5-desk.jpg 1x,
+                                    ./images/portfolio/project-5-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-5-tab.jpg 1x,
+                                    ./images/portfolio/project-5-tab@2x.jpg 2x" media="(min-width: 768px)">
+
+                                <img class="projects-pic" src="./images/portfolio/project-5-desk.jpg" alt="две коробочки">
+                                </picture>
                                 <p class="project-discription">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить
@@ -173,7 +287,19 @@
                     <li class="projects-item">
                         <a class="projects-link" href="">
                             <div class="project-thumb">
-                                <img class="projects-pic" src="./images/portfolio/project-6.jpg" alt="компьютер со страницей сайта" width="370">
+                                <picture>
+                                    <source srcset="
+                                    ./images/portfolio/project-6-mob.jpg 1x,
+                                    ./images/portfolio/project-6-mob@2x.jpg 2x" media="(max-width: 767px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-6-desk.jpg 1x,
+                                    ./images/portfolio/project-6-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-6-tab.jpg 1x,
+                                    ./images/portfolio/project-6-tab@2x.jpg 2x" media="(min-width: 768px)">
+
+                                <img class="projects-pic" src="./images/portfolio/project-6-desk.jpg" alt="компьютер со страницей сайта">
+                                </picture>
                                 <p class="project-discription">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить
@@ -193,7 +319,19 @@
                     <li class="projects-item">
                         <a class="projects-link" href="">
                             <div class="project-thumb">
-                                <img class="projects-pic" src="./images/portfolio/project-7.jpg" alt="разворот книги с иллюстрациями" width="370">
+                                <picture>
+                                    <source srcset="
+                                    ./images/portfolio/project-7-mob.jpg 1x,
+                                    ./images/portfolio/project-7-mob@2x.jpg 2x" media="(max-width: 767px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-7-desk.jpg 1x,
+                                    ./images/portfolio/project-7-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-7-tab.jpg 1x,
+                                    ./images/portfolio/project-7-tab@2x.jpg 2x" media="(min-width: 768px)">
+
+                                <img class="projects-pic" src="./images/portfolio/project-7-desk.jpg" alt="разворот книги с иллюстрациями">
+                                </picture>
                                 <p class="project-discription">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить
@@ -213,7 +351,19 @@
                     <li class="projects-item">
                         <a class="projects-link" href="">
                             <div class="project-thumb">
-                                <img class="projects-pic" src="./images/portfolio/project-8.jpg" alt="этикетка с логотипом компании" width="370">
+                                <picture>
+                                    <source srcset="
+                                    ./images/portfolio/project-8-mob.jpg 1x,
+                                    ./images/portfolio/project-8-mob@2x.jpg 2x" media="(max-width: 767px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-8-desk.jpg 1x,
+                                    ./images/portfolio/project-8-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-8-tab.jpg 1x,
+                                    ./images/portfolio/project-8-tab@2x.jpg 2x" media="(min-width: 768px)">
+
+                                <img class="projects-pic" src="./images/portfolio/project-8-desk.jpg" alt="этикетка с логотипом компании">
+                                </picture>
                                 <p class="project-discription">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить
@@ -228,13 +378,24 @@
                                     Маркетинг
                                 </p>
                             </div>
-                
                         </a>
                     </li>
                     <li class="projects-item">
                         <a class="projects-link" href="">
                             <div class="project-thumb">
-                                <img class="projects-pic" src="./images/portfolio/project-9.jpg" alt="ноутбук со страницей сайта компании" width="370">
+                                <picture>
+                                    <source srcset="
+                                    ./images/portfolio/project-9-mob.jpg 1x,
+                                    ./images/portfolio/project-9-mob@2x.jpg 2x" media="(max-width: 767px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-9-desk.jpg 1x,
+                                    ./images/portfolio/project-9-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                                    <source srcset="
+                                    ./images/portfolio/project-9-tab.jpg 1x,
+                                    ./images/portfolio/project-9-tab@2x.jpg 2x" media="(min-width: 768px)">
+
+                                <img class="projects-pic" src="./images/portfolio/project-9-desk.jpg" alt="ноутбук со страницей сайта компании">
+                                </picture>
                                 <p class="project-discription">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                                     получить
@@ -260,55 +421,59 @@
     <!-- Футер -->
     <footer class="footer">
         <div class="container footer__thumb">
-            <div>
-                <a class="logo link" href="./index.html"><span class="logo--accent">Web</span><span
-                        class="logo--light">Studio</span> </a>
-                <address class="footer__address">
-                    г. Киев, пр-т Леси Украинки, 26
-                    <ul class="footer-contacts__list list">
-                        <li class="footer-contacts__item">
-                            <a class="footer-contacts__link link" href="mailto:info@example.com">info@example.com</a>
+            <div class="tablet__thumb">
+                <div>
+                    <a class="logo link" href="./index.html"><span class="logo--accent">Web</span><span
+                            class="logo--light">Studio</span> </a>
+                    <address class="footer__address">
+                        г. Киев, пр-т Леси Украинки, 26
+                        <ul class="footer-contacts__list list">
+                            <li class="footer-contacts__item">
+                                <a class="footer-contacts__link link" href="mailto:info@example.com">info@example.com</a>
+                            </li>
+                            <li class="footer-contacts__item">
+                                <a class="footer-contacts__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <!-- Присоединяйтесь -->
+                <div class="footer-social__unit">
+                    <h2 class="footer__title"> присоединяйтесь</h2>
+                    <ul class="social__list list">
+                        <li class="footer-social__item">
+                            <a class="footer-social__link link" href="">
+                                <svg class="social__icon" width=20 height="20">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="footer-contacts__item">
-                            <a class="footer-contacts__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+                        <li class="footer-social__item">
+                            <a class="footer-social__link link" href="">
+                                <svg class="social__icon" width=20 height="20">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a class="footer-social__link link" href="">
+                                <svg class="social__icon" width=20 height="20">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a class="footer-social__link link" href="">
+                                <svg class="social__icon" width=20 height="20">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
-                </address>
+                </div>
             </div>
-            <!-- Присоединяйтесь -->
-            <div class="footer-social__unit">
-                <h2 class="footer__title"> присоединяйтесь</h2>
-                <ul class="social__list list">
-                    <li class="footer-social__item">
-                        <a class="footer-social__link link" href="">
-                            <svg class="social__icon" width=20 height="20">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social__item">
-                        <a class="footer-social__link link" href="">
-                            <svg class="social__icon" width=20 height="20">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social__item">
-                        <a class="footer-social__link link" href="">
-                            <svg class="social__icon" width=20 height="20">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social__item">
-                        <a class="footer-social__link link" href="">
-                            <svg class="social__icon" width=20 height="20">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    
+            <!-- Подпешитесь -->
             <div class="signup">
                 <form class="signup__form" autocomplete="on">
                     <label class="footer__title" for="email">Подпишитесь на рассылку
@@ -320,11 +485,10 @@
                         </svg>
                     </button>
                 </form>
-    
-    
             </div>
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

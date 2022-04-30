@@ -2,12 +2,25 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 11;
 
     width: 100vw;
     height: 100vh;
+    // padding: 93px 15px;
 
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity var(--anim), visibility var(--anim);
+    overflow-y: scroll;
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    // padding-top: 208px ;
+    // padding-bottom: 208px;
+    }
+
+    // @media screen and (min-width: 1200px) {
+    //     padding: 208px 159px;
+    // }
 
     &.is-hidden {
         opacity: 0;

@@ -109,12 +109,12 @@
     </header>
     <main>
         <!-- Герой -->
-        <!-- <section class="hero overlay">
+        <section class="hero overlay">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
                 <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
-        </section> -->
+        </section>
         <!-- Преимущества -->
         <!-- <section class="featurs section">
             <div class="container">
@@ -165,28 +165,55 @@
                 <h2 class="title">Чем мы занимаемся</h2>
                 <ul class="activity-list list">
                     <li class="activity-item">
-                        <img class="activity-pic" src="./images/box-1.jpg" alt="Приложение на компьютере" width=370 height="294">
+                        <img class="activity-pic" 
+                        srcset="
+                        ./images/box-1.jpg 1x,
+                        ./images/box-1@2x.jpg 2x"
+                        src="./images/box-1.jpg" alt="Приложение на компьютере" width=370 height="294">
                         <p class="activity-text">Десктопные приложения</p>                        
                     </li>
                     <li class="activity-item activity-thumb">
-                        <img class="activity-pic" src="./images/box-2.jpg" alt="Макеты мобильного приложения на ноутбуке" width=370
+                        <img class="activity-pic" 
+                        srcset="
+                        ./images/box-2.jpg 1x,
+                        ./images/box-2@2x.jpg 2x"
+                        src="./images/box-2.jpg" alt="Макеты мобильного приложения на ноутбуке" width=370
                             height="294">
                         <p class="activity-text">Мобильные приложения</p>
                     </li>
                     <li class="activity-item">
-                        <img class="activity-pic" src="./images/box-3.jpg" alt="Цветовая палитра на планшете" width=370 height="294">
+                        <img class="activity-pic" 
+                        srcset="
+                        ./images/box-3.jpg 1x,
+                        ./images/box-3@2x.jpg 2x"
+                        src="./images/box-3.jpg" alt="Цветовая палитра на планшете" width=370 height="294">
                         <p class="activity-text">Дизайнерские решения</p>
                     </li>
                 </ul>
             </div>            
         </section> -->
         <!-- Наша команда -->
-        <!-- <section class="team section">
+        <section class="team section">
             <div class="container">
                 <h2 class="title">Наша команда</h2>
                 <ul class="team__list list">
                     <li class="team__item">
-                        <img class="team__photo" src="./images/demyanenko.jpg" alt="Фото Игорь Демьяненко" width=270 height="260">
+                        <picture>
+                        <source srcset="
+                        ./images/demyanenko/demyanenko-mob.jpg 1x,
+                        ./images/demyanenko/demyanenko-mob@2x.jpg 2x" 
+                        media="(max-width: 767px)">
+                        <source srcset="
+                        ./images/demyanenko/demyanenko-desk.jpg 1x,
+                        ./images/demyanenko/demyanenko-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="
+                        ./images/demyanenko/demyanenko-tab.jpg 1x,
+                        ./images/demyanenko/demyanenko-tab@2x.jpg 2x" 
+                        media="(min-width: 768px)">
+                            
+                        <img class="team__photo" src="./images/demyanenko/demyanenko-desk.jpg" alt="Фото Игорь Демьяненко" width=270 height="260">
+                        </picture>
+                        
                         <div class="team-box">
                             <h3 class="team__name">Игорь Демьяненко</h3>
                             <p class="team__position" lang="en">Product Designer</p>
@@ -223,7 +250,19 @@
                         </div>                        
                     </li>
                     <li class="team__item">
-                        <img class="team__photo" src="./images/repina.jpg" alt="Фото Ольга Репина" width=270 height="260">
+                        <picture>
+                            <source srcset="
+                            ./images/repina/repina-mob.jpg 1x,
+                            ./images/repina/repina-mob@2x.jpg 2x" media="(max-width: 767px)">
+                            <source srcset="
+                            ./images/repina/repina-desk.jpg 1x,
+                            ./images/repina/repina-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="
+                            ./images/repina/repina-tab.jpg 1x,
+                            ./images/repina/repina-tab@2x.jpg 2x" media="(min-width: 768px)">
+                        <img class="team__photo" 
+                        src="./images/repina/repina-desk.jpg" alt="Фото Ольга Репина" width=270 height="260">
+                        </picture>
                         <div class="team-box">
                             <h3 class="team__name">Ольга Репина</h3>
                             <p class="team__position" lang="en">Frontend Developer</p>
@@ -260,7 +299,19 @@
                         </div>                        
                     </li>
                     <li class="team__item">
-                        <img class="team__photo" src="./images/tarasov.jpg" alt="Фото Николай Тарасов" width=270 height="260">
+                        <picture>
+                            <source srcset="
+                            ./images/tarasov/tarasov-mob.jpg 1x,
+                            ./images/tarasov/tarasov-mob@2x.jpg 2x" media="(max-width: 767px)">
+                            <source srcset="
+                            ./images/tarasov/tarasov-desk.jpg 1x,
+                            ./images/tarasov/tarasov-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="
+                            ./images/tarasov/tarasov-tab.jpg 1x,
+                            ./images/tarasov/tarasov-tab@2x.jpg 2x" media="(min-width: 768px)">
+                        <img class="team__photo" 
+                        src="./images/tarasov/tarasov-desk.jpg" alt="Фото Николай Тарасов" width=270 height="260">
+                        </picture>
                         <div class="team-box">
                             <h3 class="team__name">Николай Тарасов</h3>
                             <p class="team__position" lang="en">Marketing</p>
@@ -297,7 +348,19 @@
                         </div>                       
                     </li>
                     <li class="team__item">
-                        <img class="team__photo" src="./images/ermakov.jpg" alt="Фото Михаил Ермаков" width=270 height="260">
+                        <picture>
+                            <source srcset="
+                            ./images/ermakov/ermakov-mob.jpg 1x,
+                            ./images/ermakov/ermakov-mob@2x.jpg 2x" media="(max-width: 767px)">
+                            <source srcset="
+                            ./images/ermakov/ermakov-desk.jpg 1x,
+                            ./images/ermakov/ermakov-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="
+                            ./images/ermakov/ermakov-tab.jpg 1x,
+                            ./images/ermakov/ermakov-tab@2x.jpg 2x" media="(min-width: 768px)">
+                        <img class="team__photo" 
+                        src="./images/ermakov/ermakov-desk.jpg" alt="Фото Михаил Ермаков" width=270 height="260">
+                        </picture>
                         <div class="team-box">
                             <h3 class="team__name">Михаил Ермаков</h3>
                             <p class="team__position" lang="en">UI Designer</p>
@@ -336,8 +399,7 @@
                     </li>
                 </ul>
             </div>
-            
-        </section> -->
+        </section>
         <!-- Клиенты -->
         <!-- <section class="clients section">
             <div class="container">
@@ -391,58 +453,62 @@
         </section> -->
     </main>
     <!-- Футер -->
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container footer__thumb">
-            <!-- <div>
-                <a class="logo link" href="./index.html"><span class="logo--accent">Web</span><span class="logo--light">Studio</span> </a>
-                <address class="footer__address">
-                    г. Киев, пр-т Леси Украинки, 26
-                    <ul class="footer-contacts__list list">
-                        <li class="footer-contacts__item">
-                            <a class="footer-contacts__link link" href="mailto:info@example.com">info@example.com</a>
+            <div class="tablet__thumb">
+                <div>
+                    <a class="logo link" href="./index.html"><span class="logo--accent">Web</span><span
+                            class="logo--light">Studio</span> </a>
+                    <address class="footer__address">
+                        г. Киев, пр-т Леси Украинки, 26
+                        <ul class="footer-contacts__list list">
+                            <li class="footer-contacts__item">
+                                <a class="footer-contacts__link link" href="mailto:info@example.com">info@example.com</a>
+                            </li>
+                            <li class="footer-contacts__item">
+                                <a class="footer-contacts__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <!-- Присоединяйтесь -->
+                <div class="footer-social__unit">
+                    <h2 class="footer__title"> присоединяйтесь</h2>
+                    <ul class="social__list list">
+                        <li class="footer-social__item">
+                            <a class="footer-social__link link" href="">
+                                <svg class="social__icon" width=20 height="20">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="footer-contacts__item">
-                            <a class="footer-contacts__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+                        <li class="footer-social__item">
+                            <a class="footer-social__link link" href="">
+                                <svg class="social__icon" width=20 height="20">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a class="footer-social__link link" href="">
+                                <svg class="social__icon" width=20 height="20">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a class="footer-social__link link" href="">
+                                <svg class="social__icon" width=20 height="20">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
-                </address>
-            </div> -->
-            <!-- Присоединяйтесь -->
-            <!-- <div class="footer-social__unit">
-                <h2 class="footer__title"> присоединяйтесь</h2>
-                <ul class="social__list list">                                      
-                    <li class="footer-social__item">
-                        <a class="footer-social__link link" href="">
-                            <svg class="social__icon" width=20 height="20">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                        </a>                                    
-                    </li>
-                    <li class="footer-social__item">
-                        <a class="footer-social__link link" href="">
-                            <svg class="social__icon" width=20 height="20">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social__item">
-                        <a class="footer-social__link link" href="">
-                            <svg class="social__icon" width=20 height="20">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social__item">
-                        <a class="footer-social__link link" href="">
-                            <svg class="social__icon" width=20 height="20">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>  
-            </div> -->
+                </div>
+            </div>
+            
             <!-- Подпешитесь -->
-            <!-- <div class="signup">
+            <div class="signup">
                 <form class="signup__form" autocomplete="on">
                     <label class="footer__title" for="email">Подпишитесь на рассылку
                         <input class="signup__mail" type="email" name="email" id="email" placeholder="E-mail">
@@ -453,7 +519,7 @@
                         </svg>
                     </button>
                 </form>
-            </div> -->
+            </div>
         </div>        
     </footer>
     <!-- Бекдроп -->
