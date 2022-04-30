@@ -225,12 +225,20 @@ img {
   }
 }
 
+.menu-btn:hover .icon-menu {
+  fill: var(--accent-color);
+}
+
 .menu-btn .icon-cross {
   display: none;
 }
 
 .menu-btn.is-active .icon-cross {
   display: block;
+}
+
+.menu-btn.is-active .icon-cross:hover .icon-cros {
+  fill: var(--accent-color);
 }
 
 .menu-btn.is-active .icon-menu {
@@ -492,7 +500,7 @@ img {
 }
 
 .overlay {
-  height: 600px;
+  max-height: auto;
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
