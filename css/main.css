@@ -204,6 +204,8 @@ img {
   position: relative;
   display: flex;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .menu-btn {
@@ -369,6 +371,8 @@ img {
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.17;
   }
 }
 
@@ -880,6 +884,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-contacts__list {
+    margin-bottom: 0;
+  }
+}
+
 .footer-contacts__item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -933,6 +943,12 @@ img {
   background-color: var(--accent-color);
 }
 
+@media screen and (max-width: 767px) {
+  .signup {
+    margin-top: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .signup {
     margin-left: 93px;
@@ -946,7 +962,7 @@ img {
   }
 }
 
-.signup__form label {
+.signup__form .footer__title {
   margin-bottom: 0;
 }
 
@@ -1342,7 +1358,6 @@ img {
   .projects-list {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     margin: -15px;
   }
 }
