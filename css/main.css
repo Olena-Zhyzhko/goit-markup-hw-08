@@ -204,8 +204,13 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .header__container {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
 }
 
 .menu-btn {
